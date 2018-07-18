@@ -1,1 +1,24 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content] = "nav">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list color="secondary">
+            <button
+            ion-item
+            icon-left
+            (click)="onLoad(learningModulesPage)">
+            <ion-icon name="l-modules"></ion-icon>
+            Learning Modules</button>
+            <button
+            ion-item
+            icon-left
+            (click)="onLoad(mePage)">
+            <ion-icon name="person"></ion-icon>
+            Me</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #nav></ion-nav>

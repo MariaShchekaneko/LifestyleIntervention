@@ -1,6 +1,6 @@
 {
-  "name": "LifestyleIntervention",
-  "app_id": "",
+  "name": "firechat",
+  "app_id": "8bfc2867",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

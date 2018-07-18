@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only [navPush] = "addMealPage">
+        <ion-icon name = "add"></ion-icon>
+      </button>
+    </ion-buttons>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>My Meals</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let meal of meals; let i=index" (click)="onOpenMeal(meal, i)">
+    <img [src]="meal.imageUrl">
+    <ion-card-content text-center>
+      <ion-card-title>
+        {{ meal.title }}
+      </ion-card-title>
+      <p>{{ meal.recipe }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

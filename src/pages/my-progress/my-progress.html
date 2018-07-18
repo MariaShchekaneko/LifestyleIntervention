@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Me</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <button class="my_button"
+          ion-button
+          [navPush] = "myWeightPage">
+          <div>
+            <ion-icon name = 'stats'></ion-icon>
+            <br>
+            <label>My Weight</label>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <button class="my_button"
+          ion-button
+          [navPush] = "myBloodPressurePage">
+          <div>
+            <ion-icon name = 'medkit'></ion-icon>
+            <br>
+            <label>Blood Pressure</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button class="my_button"
+          ion-button
+          [navPush] = "stepCounterPage">
+          <div>
+            <ion-icon name = 'bicycle'></ion-icon>
+            <br>
+            <label>My Activity</label>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <button class="my_button"
+          ion-button
+          [navPush] = "myMealsPage">
+          <div>
+            <ion-icon name = 'nutrition'></ion-icon>
+            <br>
+            <label>My Meals</label>
+          </div>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button class="my_button"
+          ion-button
+          [navPush] = "myGoalsPage">
+          <div>
+            <ion-icon name = 'person'></ion-icon>
+            <br>
+            <label>My Goals</label>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

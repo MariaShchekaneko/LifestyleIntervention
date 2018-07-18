@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only [navPush] = "addBloodPressurePage">
+        <ion-icon name = "add"></ion-icon>
+      </button>
+    </ion-buttons>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>All Recorded Data</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let pressure of pressure; let i=index" (click)="onOpenPressure(pressure, i)">
+    
+      <ion-card-content text-center>
+        <ion-card-title>
+          {{ pressure.systolic }} /
+          {{ pressure.diastolic }}
+        </ion-card-title>
+       
+      </ion-card-content>
+    </ion-card>
+  
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>weight</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>
+<ion-header>
+  <ion-navbar>
+    <ion-title>Weight</ion-title>
+  </ion-navbar>
+</ion-header>  
+<ion-content padding>
+  <ion-grid>
+      <ion-row>
+          <ion-col text-center>
+            <p>Date</p>
+            <p>{{ weight.date }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col text-center>
+            <p>{{ weight.weight }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center>
+              <img [src]="weight.imageUrl">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <button
+                ion-button
+                block
+                (click)="onLeave()">Cancel</button>
+            </ion-col>
+            <ion-col>
+              <button
+                ion-button
+                block
+                color="danger"
+                (click)="onDelete()">Delete</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>

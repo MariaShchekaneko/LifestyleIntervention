@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only [navPush] = "addToDosPage">
+        <ion-icon name = "add"></ion-icon>
+      </button>
+    </ion-buttons>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>My To Dos</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let toDo of toDos; let i=index" (click)="onOpenToDo(toDo, i)">
+    
+      <ion-card-content text-center>
+        <ion-card-title>
+          {{ toDo.date }}
+        </ion-card-title>
+        <p>{{ toDo.title }}</p>
+        <p>{{ toDo.description }}</p>
+      </ion-card-content>
+    </ion-card>
+  
+</ion-content>

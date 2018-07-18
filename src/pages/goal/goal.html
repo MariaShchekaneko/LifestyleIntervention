@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Your Goal</ion-title>
+    </ion-navbar>
+  </ion-header>  
+  <ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center>
+              <p>Goal</p>
+              <p>{{ goal.goal }}</p>
+            </ion-col>
+          </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <p>Barrires</p>
+          <p>{{ goal.barriers }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <p>Strategies</p>
+          <p>{{ goal.strategies }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button
+            ion-button
+            block
+            (click)="onLeave()">Cancel</button>
+        </ion-col>
+        <ion-col>
+          <button
+            ion-button
+            block
+            color="danger"
+            (click)="onDelete()">Delete</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  

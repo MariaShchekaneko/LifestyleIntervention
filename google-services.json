@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "812704429521",
+    "firebase_url": "https://lifestyle-intervention.firebaseio.com",
+    "project_id": "lifestyle-intervention",
+    "storage_bucket": "lifestyle-intervention.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812704429521:android:86e3b7571d947ff8",
+        "android_client_info": {
+          "package_name": "com.shchekanenko.lifestyleintervention"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812704429521-aio77k7ojshui8m2mtcj0vl3fci9esrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgtbJm51j0XaZsHBQ_z-pwm9Ish2y18xo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

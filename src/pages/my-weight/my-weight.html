@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only [navPush] = "addWeightPage">
+        <ion-icon name = "add"></ion-icon>
+      </button>
+    </ion-buttons>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>All Recorded Data</ion-title>
+   
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let weight of weights; let i=index" (click)="onOpenWeight(weight, i)">
+    
+      <ion-card-content text-center>
+        <ion-card-title>
+          {{ weight.date }}
+        </ion-card-title>
+        <p>{{ weight.weight }}kg</p>
+      </ion-card-content>
+    </ion-card>
+  
+</ion-content>

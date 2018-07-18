@@ -1,5 +1,5 @@
 {
-  "name": "LifestyleIntervention",
+  "name": "firechat",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -12,28 +12,100 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
-    "@angular/animations": "5.2.11",
-    "@angular/common": "5.2.11",
-    "@angular/compiler": "5.2.11",
-    "@angular/compiler-cli": "5.2.11",
-    "@angular/core": "5.2.11",
-    "@angular/forms": "5.2.11",
-    "@angular/http": "5.2.11",
-    "@angular/platform-browser": "5.2.11",
-    "@angular/platform-browser-dynamic": "5.2.11",
-    "@ionic-native/core": "4.9.1",
-    "@ionic-native/splash-screen": "4.9.1",
-    "@ionic-native/status-bar": "4.9.1",
-    "@ionic/storage": "2.1.3",
-    "ionic-angular": "3.9.2",
+    "@angular/common": "5.0.3",
+    "@angular/compiler": "5.0.3",
+    "@angular/compiler-cli": "5.0.3",
+    "@angular/core": "^5.2.11",
+    "@angular/forms": "5.0.3",
+    "@angular/http": "5.0.3",
+    "@angular/platform-browser": "5.0.3",
+    "@angular/platform-browser-dynamic": "5.0.3",
+    "@ionic-native/camera": "^4.9.0",
+    "@ionic-native/contacts": "^4.9.0",
+    "@ionic-native/core": "^4.9.0",
+    "@ionic-native/facebook": "4.5.2",
+    "@ionic-native/file": "^4.9.0",
+    "@ionic-native/firebase": "4.5.2",
+    "@ionic-native/geolocation": "^4.9.0",
+    "@ionic-native/google-plus": "^4.9.0",
+    "@ionic-native/keyboard": "^4.9.0",
+    "@ionic-native/media-capture": "^4.9.0",
+    "@ionic-native/splash-screen": "4.4.0",
+    "@ionic-native/status-bar": "4.4.0",
+    "@ionic-native/youtube-video-player": "^4.9.0",
+    "@ionic/storage": "^2.1.3",
+    "angularfire2": "5.0.0-rc.4",
+    "cordova-android": "^7.1.0",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-camera": "^4.0.1",
+    "cordova-plugin-console": "^1.0.5",
+    "cordova-plugin-contacts": "^3.0.1",
+    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-facebook4": "1.9.1",
+    "cordova-plugin-file": "~6.0.1",
+    "cordova-plugin-firebase": "^0.1.25",
+    "cordova-plugin-geolocation": "^4.0.1",
+    "cordova-plugin-googleplus": "^5.2.1",
+    "cordova-plugin-ionic-webview": "^1.2.1",
+    "cordova-plugin-media-capture": "~3.0.1",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-statusbar": "^2.4.1",
+    "cordova-plugin-whitelist": "^1.3.1",
+    "cordova-plugin-x-socialsharing": "^5.4.1",
+    "cordova-plugin-youtube-video-player": "^1.0.6",
+    "es6-promise-plugin": "^4.1.0",
+    "firebase": "^4.13.1",
+    "ionic": "^3.20.0",
+    "ionic-angular": "^3.9.2",
+    "ionic-native": "^2.5.1",
+    "ionic-plugin-keyboard": "~2.2.1",
     "ionicons": "3.0.0",
-    "rxjs": "5.5.11",
+    "moment": "^2.22.2",
+    "ng2-cordova-oauth": "0.0.8",
+    "node-sass": "^4.9.2",
+    "promise-polyfill": "^7.0.0",
+    "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.18"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.1.10",
-    "typescript": "~2.6.2"
+    "@ionic/app-scripts": "^3.1.10",
+    "typescript": "2.4.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-media-capture": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-firebase": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-console": {},
+      "es6-promise-plugin": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-contacts": {
+        "CONTACTS_USAGE_DESCRIPTION": "we need to access contacts"
+      },
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "need to access geolocation"
+      },
+      "cordova-plugin-facebook4": {
+        "APP_ID": "964885876999551",
+        "APP_NAME": "Lifestyle Intervention",
+        "API_VERSION": "v1.1"
+      },
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.812704429521-aio77k7ojshui8m2mtcj0vl3fci9esrh"
+      },
+      "cordova-plugin-youtube-video-player": {}
+    },
+    "platforms": [
+      "ios"
+    ]
+  }
 }

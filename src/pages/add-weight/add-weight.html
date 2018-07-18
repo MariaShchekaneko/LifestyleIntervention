@@ -1,0 +1,84 @@
+
+<ion-header>
+  
+    <ion-navbar color="primary">
+      <ion-title>Weight</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+
+    <ion-content padding>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <ion-list>
+          <ion-item>
+            <ion-label fixed>Date</ion-label>
+            <ion-datetime
+            pickerFormat="MM/DD/YYYY"
+            name = "date"
+            ngModel
+            required></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label>Weight</ion-label>
+            <ion-input name = "weight"
+            type = "number"
+            ngModel
+            required></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                <h5>Take a Photo!</h5>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <button
+                  ion-button
+                  icon-left
+                  block
+                  outline
+                  type="button"
+                  (click)="onTakePhoto()">
+                  <ion-icon name="camera"></ion-icon>
+                  Open Camera
+                </button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <button
+                  ion-button
+                  icon-left
+                  block
+                  outline
+                  type="button"
+                  (click)="onAddFromGallery()">
+                  <img [src]="imageSrc" />
+                  <ion-icon name="camera"></ion-icon>
+                  Open Gallery
+                </button>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="imageUrl != ''">
+              <ion-col>
+                <img [src]="imageUrl">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <button
+                  ion-button
+                  color="secondary"
+                  block
+                  type="submit"
+                  >
+                  Add Weight Log
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </form>
+    </ion-content>
+    

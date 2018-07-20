@@ -26,6 +26,7 @@ export class MyApp {
         if(firebase.auth().currentUser)
           firebase.database().ref('accounts/'+firebase.auth().currentUser.uid).update({'online': false});
       });
+      
       platform.resume.subscribe(()=>{
         if(firebase.auth().currentUser && localStorage.getItem('showOnline') == 'true')
           firebase.database().ref('accounts/'+firebase.auth().currentUser.uid).update({'online': true});

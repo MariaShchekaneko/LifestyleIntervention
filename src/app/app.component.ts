@@ -7,6 +7,7 @@ import * as firebase from 'firebase';
 import { LoginPage } from '../pages/login/login';
 import { Platform, MenuController, NavController} from 'ionic-angular';
 import { MessagesPage } from '../pages/messages/messages';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +17,7 @@ export class MyApp {
   rootPage : any = LoginPage;
   mePage = MyProgressPage;
   learningModulesPage = LearningModulesPage;
-  messagesPage = MessagesPage;
+  messagesPage = TabsPage;
   
 
 

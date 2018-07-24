@@ -81,6 +81,7 @@ import { Facebook } from '@ionic-native/facebook';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { AppointmentsService } from '../services/appointments.service';
 
 
 
@@ -136,8 +137,10 @@ firebase.initializeApp(Settings.firebaseConfig);
       scrollAssist: false,
       autoFocusAssist: false,
       mode: 'ios',
-      tabsPlacement: 'top'
+      tabsPlacement: 'top',
+      
     }),
+    IonicStorageModule.forRoot(),
     BrowserModule,
     AngularFireModule.initializeApp(Settings.firebaseConfig,'ionic3chat'),
     AngularFireAuthModule,
@@ -190,6 +193,7 @@ firebase.initializeApp(Settings.firebaseConfig);
     MediaCapture,
 
     IonicStorageModule,
+    
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
@@ -202,6 +206,7 @@ firebase.initializeApp(Settings.firebaseConfig);
     BloodPressureService,
     SettingsService,
     YoutubeVideoPlayer,
+    AppointmentsService,
     File,
     Geolocation,
     Firebase,

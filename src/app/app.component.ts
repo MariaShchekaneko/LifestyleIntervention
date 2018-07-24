@@ -5,16 +5,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'firebase';
 import { LoginPage } from '../pages/login/login';
-//import { TabsPage } from './../pages/tabs/tabs';
-import { Platform, MenuController, NavController } from 'ionic-angular';
+import { Platform, MenuController, NavController} from 'ionic-angular';
+import { MessagesPage } from '../pages/messages/messages';
 
 @Component({
   templateUrl: 'app.html'
 }) 
+
 export class MyApp {
-  rootPage = LoginPage;
+  rootPage : any = LoginPage;
   mePage = MyProgressPage;
   learningModulesPage = LearningModulesPage;
+  messagesPage = MessagesPage;
+  
 
 
   @ViewChild('nav') nav: NavController;
@@ -26,7 +29,7 @@ export class MyApp {
         if(firebase.auth().currentUser)
           firebase.database().ref('accounts/'+firebase.auth().currentUser.uid).update({'online': false});
       });
-      
+
       platform.resume.subscribe(()=>{
         if(firebase.auth().currentUser && localStorage.getItem('showOnline') == 'true')
           firebase.database().ref('accounts/'+firebase.auth().currentUser.uid).update({'online': true});

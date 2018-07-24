@@ -1,10 +1,9 @@
 import { Goal } from './../../models/goal';
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, NavParams } from 'ionic-angular';
+import { ViewController, NavParams } from 'ionic-angular';
 import { ActionPlannerService } from './../../services/actionPlanner.service';
 
 
-@IonicPage()
 @Component({
   selector: 'page-goal',
   templateUrl: 'goal.html',

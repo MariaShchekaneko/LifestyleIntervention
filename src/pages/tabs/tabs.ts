@@ -6,17 +6,12 @@ import { GroupsPage } from '../groups/groups';
 import { FriendsPage } from '../friends/friends';
 import { DataProvider } from '../../providers/data';
 import * as firebase from 'firebase';
-//import { MyProgressPage } from './../my-progress/my-progress';
-//import { LearningModulesPage } from './../learning-modules/learning-modules';
-
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  //learningModulesPage = LearningModulesPage;
- // myProgressPage = MyProgressPage;
   messages: any = MessagesPage;
   groups: any = GroupsPage;
   friends: any = FriendsPage;

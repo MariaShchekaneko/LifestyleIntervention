@@ -1,4 +1,3 @@
-import { TabsPage } from './../tabs/tabs';
 import { MyProgressPage } from './../my-progress/my-progress';
 import { LearningModulesPage } from './../learning-modules/learning-modules';
 import { Component } from '@angular/core';

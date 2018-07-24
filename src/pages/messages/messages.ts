@@ -6,10 +6,12 @@ import { DataProvider } from '../../providers/data';
 import { MessagePage } from '../message/message';
 import * as firebase from 'firebase';
 
+
 @Component({
   selector: 'page-messages',
   templateUrl: 'messages.html'
 })
+
 export class MessagesPage {
   private conversations: any;
   private updateDateTime: any;

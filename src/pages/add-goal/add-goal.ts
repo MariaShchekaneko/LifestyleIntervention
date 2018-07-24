@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, ToastController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 import { ActionPlannerService } from './../../services/actionPlanner.service';
 import { NgForm } from "@angular/forms";
 
-@IonicPage()
 @Component({
   selector: 'page-add-goal',
   templateUrl: 'add-goal.html',

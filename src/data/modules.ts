@@ -140,7 +140,7 @@ modules: [
 
 export default [
     {
-    category: 'Modules',
+    category: 'Moduler',
     modules: [
     {
     id: "1. Motivasjon for endring" ,

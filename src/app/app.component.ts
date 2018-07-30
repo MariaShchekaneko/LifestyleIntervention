@@ -9,6 +9,7 @@ import { Platform, MenuController, NavController} from 'ionic-angular';
 import { MessagesPage } from '../pages/messages/messages';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ToolsPage } from '../pages/tools/tools';
+import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
@@ -19,6 +20,7 @@ export class MyApp {
   learningModulesPage = LearningModulesPage;
   messagesPage = TabsPage;
   toolsPage = ToolsPage;
+  homePage = HomePage;
 
 
 

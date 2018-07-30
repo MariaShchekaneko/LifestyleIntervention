@@ -4,7 +4,7 @@
     videoUrl: string;
 }
 */
-export interface Modules2 {
+export interface Module {
     id: string;
     description: string;
 }

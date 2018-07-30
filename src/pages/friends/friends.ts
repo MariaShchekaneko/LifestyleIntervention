@@ -27,8 +27,6 @@ export class FriendsPage {
   private excludedIds: any = [];
   private searchUser: any;
 
-  // FriendsPage
-  // This is the page where the user can search, view, and initiate a chat with their friends.
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, public dataProvider: DataProvider,
     public loadingProvider: LoadingProvider, public alertProvider: AlertProvider, public alertCtrl: AlertController, public firebaseProvider: FirebaseProvider ) { }
 
@@ -68,7 +66,7 @@ export class FriendsPage {
     this.friends = [];
     // Get user data on database and get list of friends.
     this.dataProvider.getCurrentUser().snapshotChanges().subscribe((account) => {
-      
+
       if (account.payload.val()!= null && account.payload.val().friends != null) {
         for (var i = 0; i < account.payload.val().friends.length; i++) {
           this.dataProvider.getUser(account.payload.val().friends[i]).snapshotChanges().subscribe((friend) => {
@@ -123,7 +121,7 @@ export class FriendsPage {
   getFriendRequests() {
     this.friendRequests = [];
     this.requestsSent = [];
-    
+
     this.loadingProvider.show();
     // Get user info
     this.dataProvider.getCurrentUser().snapshotChanges().subscribe((account) => {
@@ -223,7 +221,7 @@ export class FriendsPage {
           return { $key: c.key, ...c.payload.val()}
       });
       console.log(this.accounts)
-      
+
       this.dataProvider.getCurrentUser().snapshotChanges().subscribe((account) => {
         // Add own userId as exludedIds.
         console.log(account.payload.val());

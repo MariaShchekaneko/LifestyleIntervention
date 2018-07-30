@@ -11,7 +11,6 @@
         <img src="{{user.img}}" tappable (click)="enlargeImage(user.img)">
         <h3>{{user.name}}</h3>
         <p>@{{user.username}}</p>
-        <p>{{user.description}}</p>
     </div>
     <div class="center">
       <!-- Show actions based on the status of the user in relation to the current logged in user. -->
@@ -31,7 +30,6 @@
       <div *ngIf="friends && friends.indexOf(user.$key) > -1">
         <p class="info">You are already friends.</p>
         <button ion-button class="primary" tappable (click)="sendMessage()">Send Message</button>
-        <button ion-button class="danger" tappable (click)="block()">Block User</button>
       </div>
     </div>
   </div>

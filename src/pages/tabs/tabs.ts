@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
-import { HomePage } from '../home/home';
 import { MessagesPage } from '../messages/messages';
 import { GroupsPage } from '../groups/groups';
 import { FriendsPage } from '../friends/friends';
@@ -15,7 +14,6 @@ export class TabsPage {
   messages: any = MessagesPage;
   groups: any = GroupsPage;
   friends: any = FriendsPage;
-  profile: any = HomePage;
   private unreadMessagesCount: any;
   private friendRequestCount: any = 0;
   private unreadGroupMessagesCount: any;
@@ -43,7 +41,7 @@ export class TabsPage {
     this.dataProvider.getConversations().snapshotChanges().subscribe((conversationsInfoRes) => {
       let conversationsInfo = [];
       conversationsInfo = conversationsInfoRes.map(c => ({ $key: c.key, ...c.payload.val()}));
-      
+
 
       this.conversationsInfo = null;
       this.conversationList = null;

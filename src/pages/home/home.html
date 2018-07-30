@@ -20,18 +20,14 @@
         <p tappable (click)="setUsername()" >@{{user.username}}</p>
     </div>
     <ion-list>
-      <ion-item>
-        <ion-label>Enable Notification</ion-label>
-        <ion-toggle item-right [(ngModel)]="isPushEnabled" [disabled]="isBrowser" (ionChange)="changeNotification()"></ion-toggle>
-      </ion-item>
       <ion-item tappable (click)="setEmail()">
-        Change Email Address
+        Endre epost
       </ion-item>
       <ion-item tappable (click)="setPassword()" *ngIf="user && user.provider == 'Firebase'">
-        Change Password
+        Nytt passord
       </ion-item>
       <ion-item tappable (click)="deleteAccount()">
-        Delete Account
+        Slett Konto
       </ion-item>
     </ion-list>
   </div>

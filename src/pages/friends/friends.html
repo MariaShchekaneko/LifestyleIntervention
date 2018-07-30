@@ -5,19 +5,19 @@
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title>{{title}}</ion-title>
+    <ion-title>Venner</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
     <ion-segment padding [(ngModel)]="tab" (ionChange)="segmentChanged($event)">
       <ion-segment-button value="friends">
-        FRIENDS
+        Venner
       </ion-segment-button>
       <ion-segment-button value="requests">
         REQUESTS <span *ngIf="friendRequestCount != 0">({{friendRequestCount}})</span>
       </ion-segment-button>
       <ion-segment-button value="search">
-        FIND NEW
+        SØK
       </ion-segment-button>
     </ion-segment>
     <div [ngSwitch]="tab">
@@ -25,7 +25,7 @@
           <!-- No friends to show -->
         <div class="empty-list" *ngIf="friends && friends.length == 0">
             <h1><ion-icon name="contacts"></ion-icon></h1>
-            <p>You don't have new friend yet</p>
+            <p></p>
           </div>
           <!-- Show list of friends -->
           <ion-list class="avatar-list" *ngIf="friends && friends.length > 0">

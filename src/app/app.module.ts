@@ -1,10 +1,8 @@
-import { Tabs2Page } from './../pages/tabs2/tabs2';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SettingsService } from './../services/settings.service';
 import { WeightService } from './../services/weight.service';
 import { ToDoService } from './../services/toDo.service';
 import { LearningModulesService } from './../services/learningModules.service';
-import { MealsService } from './../services/meals.service';
 import { ActionPlannerService } from './../services/actionPlanner.service';
 import { AuthService } from './../services/auth';
 import { YoutubePipe } from './../pipes/youtube/youtube';
@@ -18,9 +16,6 @@ import { ModulesByCategoryPage } from './../pages/modules-by-category/modules-by
 import { LearningModulePage } from './../pages/learning-module/learning-module';
 import { AddGoalPage } from './../pages/add-goal/add-goal';
 import { GoalPage } from './../pages/goal/goal';
-import { MealPage } from './../pages/meal/meal';
-import { AddMealPage } from './../pages/add-meal/add-meal';
-import { MyMealsPage } from './../pages/my-meals/my-meals';
 import { ActionPlannerPage } from './../pages/action-planner/action-planner';
 import { TodayPage } from './../pages/today/today';
 import { MyProgressPage } from './../pages/my-progress/my-progress';
@@ -78,7 +73,6 @@ import { Facebook } from '@ionic-native/facebook';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
-import { AppointmentsService } from '../services/appointments.service';
 
 
 
@@ -92,7 +86,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     LoginPage,
     HomePage,
     TabsPage,
-    Tabs2Page,
     MessagesPage,
     GroupsPage,
     GroupInfoPage,
@@ -110,9 +103,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     MyProgressPage,
     TodayPage,
     ActionPlannerPage,
-    MyMealsPage,
-    AddMealPage,
-    MealPage,
     GoalPage,
     AddGoalPage,
     LearningModulePage,
@@ -151,7 +141,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     LoginPage,
     HomePage,
     TabsPage,
-    Tabs2Page,
     MessagesPage,
     GroupsPage,
     FriendsPage,
@@ -164,9 +153,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     MyProgressPage,
     TodayPage,
     ActionPlannerPage,
-    MyMealsPage,
-    AddMealPage,
-    MealPage,
     GoalPage,
     AddGoalPage,
     LearningModulePage,
@@ -197,13 +183,11 @@ firebase.initializeApp(Settings.firebaseConfig);
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     ActionPlannerService,
-    MealsService,
     LearningModulesService,
     ToDoService,
     WeightService,
     SettingsService,
     YoutubeVideoPlayer,
-    AppointmentsService,
     File,
     Geolocation,
     Firebase,

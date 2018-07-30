@@ -40,10 +40,10 @@ export class WeightService {
       }
 
 
- deleteWeight(index: number) {
+    deleteWeight(index: number) {
          this.weights.splice(index, 1);
          this.storage.set('weights', this.weights)
-       }
+     }
 
 
 }

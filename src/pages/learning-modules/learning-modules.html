@@ -5,13 +5,13 @@
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title>Learning Modules</ion-title>
+    <ion-title>Læringsmoduler</ion-title>
 </ion-navbar>
 
 </ion-header>
 <ion-content padding>
   <ion-list>
-    <button 
+    <button
     ion-item
      *ngFor="let moduleGroup of moduleCollection;  let i=index"
      [navPush]="modulesByCategoryPage"

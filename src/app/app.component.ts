@@ -8,17 +8,18 @@ import { LoginPage } from '../pages/login/login';
 import { Platform, MenuController, NavController} from 'ionic-angular';
 import { MessagesPage } from '../pages/messages/messages';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { ToolsPage } from '../pages/tools/tools';
 @Component({
   templateUrl: 'app.html'
-}) 
+})
 
 export class MyApp {
   rootPage : any = LoginPage;
   mePage = MyProgressPage;
   learningModulesPage = LearningModulesPage;
   messagesPage = TabsPage;
-  
+  toolsPage = ToolsPage;
+
 
 
   @ViewChild('nav') nav: NavController;
@@ -41,5 +42,5 @@ export class MyApp {
     this.nav.setRoot(page);
     this.menuCtrl.close();
   }
-  
+
 }

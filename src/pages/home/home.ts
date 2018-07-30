@@ -18,14 +18,9 @@ import { Firebase } from '@ionic-native/firebase';
 export class HomePage {
   private user: any;
   private alert;
-  showOnline: any = false;
   isPushEnabled: any = false;
   isBrowser: any = false;
-  // HomePage
-  // This is the page where the user is directed after successful login and email is confirmed.
-  // A couple of profile management function is available for the user in this page such as:
-  // Change name, profile pic, email, and password
-  // The user can also opt for the deletion of their account, and finally logout.
+
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, public navParams: NavParams, public app: App,
     public logoutProvider: LogoutProvider, public loadingProvider: LoadingProvider, public imageProvider: ImageProvider,
     public angularfire: AngularFireDatabase, public alertProvider: AlertProvider, public dataProvider: DataProvider,
@@ -35,9 +30,6 @@ export class HomePage {
 
     if(localStorage.getItem('isPushEnabled') == 'true') this.isPushEnabled = true;
     else this.isPushEnabled = false;
-    
-    if(localStorage.getItem('showOnline') == 'true') this.showOnline = true;
-    else this.showOnline = false;
 
   }
 
@@ -50,17 +42,6 @@ export class HomePage {
       this.user = user.payload.val();
       console.log(this.user);
     });
-  }
-  changeStatus(){
-    console.log(this.showOnline);
-    localStorage.setItem('showOnline',this.showOnline);
-    this.angularfire.object('accounts/'+this.user.userId).update({
-      online: this.showOnline
-    });
-  }
-
-  showBlockedList(){
-    this.modal.create("BlockedlistPage").present();
   }
   changeNotification(){
 
@@ -237,42 +218,6 @@ export class HomePage {
     }).present();
   }
 
-  //Set description
-  setDescription() {
-    this.alert = this.alertCtrl.create({
-      title: 'Change Description',
-      message: "Please enter a new description.",
-      inputs: [
-        {
-          name: 'description',
-          placeholder: 'Your Description',
-          value: this.user.description
-        }
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-          handler: data => { }
-        },
-        {
-          text: 'Save',
-          handler: data => {
-            let description = data["description"];
-            // Check if entered description is different from the current description
-            if (this.user.description != description) {
-              this.angularfire.object('/accounts/' + this.user.userId).update({
-                description: description
-              }).then((success) => {
-                this.alertProvider.showProfileUpdatedMessage();
-              }).catch((error) => {
-                this.alertProvider.showErrorMessage('profile/error-update-profile');
-              });
-            }
-          }
-        }
-      ]
-    }).present();
-  }
 
   // Change user's email. Uses Validator.ts to validate the entered email. After, update the userData on database.
   // When the user changed their email, they have to confirm the new email address.

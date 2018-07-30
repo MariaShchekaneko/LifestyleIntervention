@@ -15,10 +15,8 @@ export class LoginPage {
   private emailPasswordForm: FormGroup;
   private emailForm: FormGroup;
   private facebookLoginEnabled : any;
-  private googleLoginEnabled : any;
-  private phoneLoginEnabled: any;
 
-  
+
   constructor(public navCtrl: NavController, public loginProvider: LoginProvider, public formBuilder: FormBuilder, public modalCtrl: ModalController) {
     // It's important to hook the navController to our loginProvider.
     this.loginProvider.setNavController(this.navCtrl);
@@ -31,8 +29,6 @@ export class LoginPage {
       email: Validator.emailValidator
     });
     this.facebookLoginEnabled = Settings.facebookLoginEnabled;
-    this.googleLoginEnabled = Settings.googleLoginEnabled;
-    this.phoneLoginEnabled = Settings.phoneLoginEnabled;
   }
 
   ionViewDidLoad() {
@@ -41,8 +37,7 @@ export class LoginPage {
   }
 
   // Call loginProvider and login the user with email and password.
-  // You may be wondering where the login function for Facebook and Google are.
-  // They are called directly from the html markup via loginProvider.facebookLogin() and loginProvider.googleLogin().
+  //Login is called directly from the html markup via loginProvider.facebookLogin().
   login() {
     this.loginProvider.emailLogin(this.emailPasswordForm.value["email"], this.emailPasswordForm.value["password"]);
   }

@@ -44,7 +44,7 @@ import { GroupPage } from '../pages/group/group';
 import { GroupInfoPage } from '../pages/group-info/group-info';
 import { NewGroupPage } from '../pages/new-group/new-group';
 import { AddMembersPage } from '../pages/add-members/add-members';
-
+import { ToolsPage } from './../pages/tools/tools';
 import { LoginProvider } from '../providers/login';
 import { LogoutProvider } from '../providers/logout';
 import { LoadingProvider } from '../providers/loading';
@@ -89,7 +89,8 @@ import { AppointmentsService } from '../services/appointments.service';
 firebase.initializeApp(Settings.firebaseConfig);
 
 @NgModule({
-  declarations: [
+   declarations: [
+    ToolsPage,
     MyApp,
     LoginPage,
     HomePage,
@@ -128,7 +129,8 @@ firebase.initializeApp(Settings.firebaseConfig);
     BloodPressurePage,
     MyBloodPressurePage,
     AddBloodPressurePage,
-    YoutubePipe
+    YoutubePipe,
+
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -138,7 +140,7 @@ firebase.initializeApp(Settings.firebaseConfig);
       autoFocusAssist: false,
       mode: 'ios',
       tabsPlacement: 'top',
-      
+
     }),
     IonicStorageModule.forRoot(),
     BrowserModule,
@@ -182,6 +184,7 @@ firebase.initializeApp(Settings.firebaseConfig);
     BloodPressurePage,
     MyBloodPressurePage,
     AddBloodPressurePage,
+    ToolsPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler },
     SplashScreen,
@@ -193,7 +196,7 @@ firebase.initializeApp(Settings.firebaseConfig);
     MediaCapture,
 
     IonicStorageModule,
-    
+
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

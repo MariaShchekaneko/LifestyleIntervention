@@ -1,4 +1,4 @@
-export default [
+/*export default [
     {
     category: 'Modules',
     modules: [
@@ -8,22 +8,22 @@ export default [
    // videoUrl: "https://player.vimeo.com/video/129693969?api=1&player_id=video"
     videoUrl: "https://www.youtube.com/embed/6yEolzkdlGk?ecver=2"
     },
-   
+
 
     {
     id: "Module 2. Eating the DASH Way" ,
     description: "This week, we will learn what the DASH eating plan is, and learn how to follow DASH.",
     //videoUrl: "https://player.vimeo.com/video/133148174?api=1&player_id=video"
     videoUrl: "https://www.youtube.com/embed/nxu0BeEf0k8?ecver=2"
-    }, 
+    },
 
     {
     id: "Module 3. Part 1: Getting Support: Who’s On My Team?" ,
     description: "In this module, we will talk about how we can get support from families and friends.",
     //videoUrl: "https://player.vimeo.com/video/133151263?api=1&player_id=video"
     videoUrl: "https://www.youtube.com/embed/dSRMdf34PzY?ecver=2"
-    }, 
-    
+    },
+
     {
     id: "Module 3. Part 2: Giving Support: How Can I Help?" ,
     description: "In this module, we hope to engage friends and family members in supporting us on this HH4M journey. ",
@@ -130,6 +130,75 @@ modules: [
     description: "How do I quit smoking cigarettes? How do I not resume smoking? How do I encourage a smoke-free household?",
     videoUrl: "https://www.youtube.com/embed/OA-C-bG6UVQ?ecver=2"
     }
+
+  ],
+  icon: 'book'
+}
+];
+*/
+
+
+export default [
+    {
+    category: 'Modules',
+    modules: [
+    {
+    id: "1. Motivasjon for endring" ,
+    description: ""
+    },
+
+    {
+    id: "2. Måltidsrytme" ,
+    description: ""
+    },
+
+    {
+     id: "3. Porsjonsstørrelse" ,
+     description: ""
+     },
+
+    {
+    id: "4. Energibalanse" ,
+    description: ""
+    },
+
+    {
+    id: "5. Energitett, næringsfattig vs energifattig næringsrik mat" ,
+    description: ""
+    },
+
+    {
+    id: "6. Salt" ,
+    description: ""
+    },
+
+
+    {
+    id: "7. Sukker" ,
+    description: ""
+    }
+
+
+
+],
+icon: 'book'
+},
+{
+category: 'Bonus Moduler',
+modules: [
+
+
+    {
+    id: "1. Stressmestring" ,
+    description: ""
+    },
+
+    {
+    id: "2. Amming og vektnedgang" ,
+    description: ""
+    },
+
+
 
   ],
   icon: 'book'

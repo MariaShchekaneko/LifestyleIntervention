@@ -1,7 +1,7 @@
 import { Module } from './../../models/module';
 import { NavParams, ViewController } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+//import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @Component({
   selector: 'page-learning-module',
@@ -9,17 +9,17 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 })
 export class LearningModulePage {
 
-  module: Module; 
-  videoUrl: string;
+  module: Module;
+  //videoUrl: string;
 
   constructor(public navParams: NavParams,
               private viewCtrl: ViewController,
-              private youtube: YoutubeVideoPlayer
+              //private youtube: YoutubeVideoPlayer
             )
     {
     this.module = this.navParams.get('module');
     }
-    
+
 
   onLeave() {
     this.viewCtrl.dismiss();
@@ -33,8 +33,8 @@ export class LearningModulePage {
     };
     this.steamingMedia.playVideo(this.module.videoUrl, options);
    // this.youtube.openVideo(this.module.videoUrl);
-    
-  }*/
+
+  }
  // playVideo() {
    //this.youtube.openVideo(this.module.videoUrl);
    //this.youtube.openVideo('https://www.youtube.com/watch?v=ibP5WJOPkR');
@@ -42,5 +42,5 @@ export class LearningModulePage {
   playVideo() {
    this.youtube.openVideo('https://youtu.be/z_aVNv_gNdM?list=RDEM5ir_mINWufd3myKxvGd8ug');
    }
-
+*/
 }

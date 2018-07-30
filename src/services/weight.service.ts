@@ -12,9 +12,8 @@ export class WeightService {
     constructor(private storage: Storage) {}
 
     addWeight(date: Date,
-            weight: number,
-            imageUrl: string) {
-        const my_weight = new Weight(date, weight, imageUrl);
+            weight: number) {
+        const my_weight = new Weight(date, weight);
         this.weights.push(my_weight);
         this.storage.set('weights', this.weights)
         .then()
@@ -55,7 +54,6 @@ export class WeightService {
       }
 
       private removeFile(weight: Weight) {
-        const currentName = weight.imageUrl.replace(/^.*[\\\/]/, '');
         File.removeFile(cordova.file.dataDirectory, currentName)
           .then(
             () => console.log('Removed File')
@@ -63,11 +61,11 @@ export class WeightService {
           .catch(
             () => {
               console.log('Error while removing File');
-              this.addWeight(weight.date, weight.weight, weight.imageUrl);
+              this.addWeight(weight.date, weight.weight);
             }
           );
       }
-      
+
 
 
 }

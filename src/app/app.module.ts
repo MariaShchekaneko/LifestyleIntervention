@@ -36,6 +36,8 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { RecipesPage } from '../pages/recipes/recipes';
+import { FactsPage } from '../pages/facts/facts';
 import { MessagesPage } from '../pages/messages/messages';
 import { GroupsPage } from '../pages/groups/groups';
 import { FriendsPage } from '../pages/friends/friends';
@@ -130,6 +132,8 @@ firebase.initializeApp(Settings.firebaseConfig);
     MyBloodPressurePage,
     AddBloodPressurePage,
     YoutubePipe,
+    FactsPage,
+    RecipesPage
 
   ],
   imports: [
@@ -184,7 +188,9 @@ firebase.initializeApp(Settings.firebaseConfig);
     BloodPressurePage,
     MyBloodPressurePage,
     AddBloodPressurePage,
-    ToolsPage
+    ToolsPage,
+    FactsPage,
+    RecipesPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler },
     SplashScreen,

@@ -1,7 +1,6 @@
 import { Tabs2Page } from './../pages/tabs2/tabs2';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SettingsService } from './../services/settings.service';
-import { BloodPressureService } from './../services/bloodPressure.service';
 import { WeightService } from './../services/weight.service';
 import { ToDoService } from './../services/toDo.service';
 import { LearningModulesService } from './../services/learningModules.service';
@@ -9,9 +8,6 @@ import { MealsService } from './../services/meals.service';
 import { ActionPlannerService } from './../services/actionPlanner.service';
 import { AuthService } from './../services/auth';
 import { YoutubePipe } from './../pipes/youtube/youtube';
-import { AddBloodPressurePage } from './../pages/add-blood-pressure/add-blood-pressure';
-import { MyBloodPressurePage } from './../pages/my-blood-pressure/my-blood-pressure';
-import { BloodPressurePage } from './../pages/blood-pressure/blood-pressure';
 import { AddWeightPage } from './../pages/add-weight/add-weight';
 import { MyWeightPage } from './../pages/my-weight/my-weight';
 import { WeightPage } from './../pages/weight/weight';
@@ -32,7 +28,6 @@ import { LearningModulesPage } from './../pages/learning-modules/learning-module
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -128,9 +123,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     WeightPage,
     MyWeightPage,
     AddWeightPage,
-    BloodPressurePage,
-    MyBloodPressurePage,
-    AddBloodPressurePage,
     YoutubePipe,
     FactsPage,
     RecipesPage
@@ -185,9 +177,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     WeightPage,
     MyWeightPage,
     AddWeightPage,
-    BloodPressurePage,
-    MyBloodPressurePage,
-    AddBloodPressurePage,
     ToolsPage,
     FactsPage,
     RecipesPage
@@ -212,7 +201,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     LearningModulesService,
     ToDoService,
     WeightService,
-    BloodPressureService,
     SettingsService,
     YoutubeVideoPlayer,
     AppointmentsService,

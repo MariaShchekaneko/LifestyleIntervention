@@ -39,33 +39,11 @@ export class WeightService {
           );
       }
 
-      deleteWeight(index: number) {
-        const weight = this.weights[index];
-        this.weights.splice(index, 1);
-        this.storage.set('weights', this.weights)
-          .then(
-            () => {
-              this.removeFile(weight);
-            }
-          )
-          .catch(
-            err => console.log(err)
-          );
-      }
 
-      private removeFile(weight: Weight) {
-        File.removeFile(cordova.file.dataDirectory, currentName)
-          .then(
-            () => console.log('Removed File')
-          )
-          .catch(
-            () => {
-              console.log('Error while removing File');
-              this.addWeight(weight.date, weight.weight);
-            }
-          );
-      }
-
+ deleteWeight(index: number) {
+         this.weights.splice(index, 1);
+         this.storage.set('weights', this.weights)
+       }
 
 
 }

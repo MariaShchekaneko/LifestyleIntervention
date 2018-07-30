@@ -2,7 +2,7 @@
 <ion-header>
 
     <ion-navbar color="primary">
-      <ion-title>Weight</ion-title>
+      <ion-title>Vekt</ion-title>
     </ion-navbar>
 
   </ion-header>
@@ -11,7 +11,7 @@
       <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <ion-list>
           <ion-item>
-            <ion-label fixed>Date</ion-label>
+            <ion-label fixed>Dato</ion-label>
             <ion-datetime
             pickerFormat="MM/DD/YYYY"
             name = "date"
@@ -19,7 +19,7 @@
             required></ion-datetime>
           </ion-item>
           <ion-item>
-            <ion-label>Weight</ion-label>
+            <ion-label>Vekt</ion-label>
             <ion-input name = "weight"
             type = "number"
             ngModel
@@ -35,7 +35,7 @@
                 block
                 [disabled]="!f.valid"
                 type="submit">
-                Add
+                OK
               </button>
             </ion-col>
           </ion-row>

@@ -5,15 +5,14 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Me</ion-title>
+    <ion-title>Meg</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-6>
         <button class="my_button"
-          ion-button
+          ion-button full
           [navPush] = "myWeightPage">
           <div>
             <ion-icon name = ''></ion-icon>
@@ -21,34 +20,21 @@
             <label>Min Vekt</label>
           </div>
         </button>
-      </ion-col>
-      <ion-col col-6>
-        <button class="my_button"
-          ion-button
-          [navPush] = "myBloodPressurePage">
-          <div>
-            <ion-icon name = ''></ion-icon>
-            <br>
-            <label>Blodtrykk</label>
-          </div>
-        </button>
-      </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col col-6>
+      <ion-row>
+          <button class="my_button"
+                  ion-button full
+                  [navPush] = "">
+            <div>
+              <ion-icon name = ''></ion-icon>
+              <br>
+              <label>Tidspan</label>
+            </div>
+          </button>
+      </ion-row>
+      <ion-row>
         <button class="my_button"
-          ion-button
-          [navPush] = "">
-          <div>
-            <ion-icon name = ''></ion-icon>
-            <br>
-            <label>Tidspan</label>
-          </div>
-        </button>
-      </ion-col>
-      <ion-col col-6>
-        <button class="my_button"
-          ion-button
+          ion-button full
           [navPush] = "myGoalsPage">
           <div>
             <ion-icon name = ''></ion-icon>
@@ -56,7 +42,6 @@
             <label>Mine Mål</label>
           </div>
         </button>
-      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

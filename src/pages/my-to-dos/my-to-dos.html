@@ -10,7 +10,7 @@
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title>My To Dos</ion-title>
+    <ion-title>Mine Mål</ion-title>
 </ion-navbar>
 
 </ion-header>
@@ -18,7 +18,7 @@
 
 <ion-content padding>
   <ion-card *ngFor="let toDo of toDos; let i=index" (click)="onOpenToDo(toDo, i)">
-    
+
       <ion-card-content text-center>
         <ion-card-title>
           {{ toDo.date }}
@@ -27,5 +27,5 @@
         <p>{{ toDo.description }}</p>
       </ion-card-content>
     </ion-card>
-  
+
 </ion-content>

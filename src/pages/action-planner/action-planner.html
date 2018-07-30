@@ -10,13 +10,13 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>My Goals</ion-title>
+    <ion-title>Mine Mål</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
   <ion-card *ngFor="let goal of goals; let i=index" (click)="onOpenGoal(goal, i)">
     <ion-card-content text-center>
-       <p>{{ goal.goal }}</p> 
+       <p>{{ goal.goal }}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

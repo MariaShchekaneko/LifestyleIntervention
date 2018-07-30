@@ -5,19 +5,15 @@
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title>Profile</ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="logout()">logut</button>
-    </ion-buttons>
+    <ion-title>Profil</ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <div *ngIf="user">
     <div class="top">
-        <img src="{{user.img}}" tappable (click)="setPhoto()">
-        <h3 tappable (click)="setName()">{{user.name}}</h3>
-        <p tappable (click)="setUsername()" >@{{user.username}}</p>
+        <img src="{{user.img}}" >
     </div>
     <ion-list>
       <ion-item tappable (click)="setEmail()">
@@ -28,6 +24,9 @@
       </ion-item>
       <ion-item tappable (click)="deleteAccount()">
         Slett Konto
+      </ion-item>
+      <ion-item tappable (click)="logout()">
+        Logg ut
       </ion-item>
     </ion-list>
   </div>

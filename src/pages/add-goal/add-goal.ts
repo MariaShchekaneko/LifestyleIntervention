@@ -14,12 +14,12 @@ export class AddGoalPage {
     private toastCtrl: ToastController) {
 }
   onSubmit(form: NgForm) {
-    this.actionPlannerService.addGoal(form.value.goalName, 
+    this.actionPlannerService.addGoal(form.value.goalName,
                              form.value.barrierName,
                              form.value.strategyName);
    form.resetForm();
    const toast = this.toastCtrl.create({
-    message: 'Goal was added!',
+    message: 'Ditt mål er lagret!',
     duration: 2500,
     position: 'middle'
   });

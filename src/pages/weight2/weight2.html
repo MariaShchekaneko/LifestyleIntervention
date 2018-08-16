@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Vekt</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Legg til din vekt</h2>
+  <form [formGroup]="form">
+    <ion-card>
+      <ion-card-header>Vekt</ion-card-header>
+      <ion-card-content>
+        <ion-list>
+
+          <ion-item>
+            <ion-label fixed>Vekt (kg)</ion-label>
+            <ion-input type="number" formControlName="weight"></ion-input>
+          </ion-item>
+
+        </ion-list>
+        <button ion-button round full (click)="addWeight(form)">Legg til vekt</button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+
+</ion-content>

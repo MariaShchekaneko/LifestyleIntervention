@@ -26,11 +26,11 @@ export class WeightPage {
 
   onDelete() {
       const alert = this.alertCtrl.create ({
-      title: 'Remove',
-      message: 'Are you sure you want to remove this log?',
+      title: 'Slett',
+      message: 'Er du sikker?',
       buttons: [
         {
-          text: 'Yes, go ahead',
+          text: 'Ja',
           handler: () => {
             this.weightService.deleteWeight(this.index);
             this.onLeave();
@@ -38,7 +38,7 @@ export class WeightPage {
           }
         },
         {
-          text: 'No, I changed my mind',
+          text: 'Nei',
           handler: () => {
             console.log('Canceled');
           }

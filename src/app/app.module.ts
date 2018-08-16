@@ -1,17 +1,12 @@
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SettingsService } from './../services/settings.service';
 import { WeightService } from './../services/weight.service';
-import { ToDoService } from './../services/toDo.service';
 import { LearningModulesService } from './../services/learningModules.service';
 import { ActionPlannerService } from './../services/actionPlanner.service';
-import { AuthService } from './../services/auth';
 import { YoutubePipe } from './../pipes/youtube/youtube';
 import { AddWeightPage } from './../pages/add-weight/add-weight';
 import { MyWeightPage } from './../pages/my-weight/my-weight';
 import { WeightPage } from './../pages/weight/weight';
-import { ToDoPage } from './../pages/to-do/to-do';
-import { AddToDosPage } from './../pages/add-to-dos/add-to-dos';
-import { MyToDosPage } from './../pages/my-to-dos/my-to-dos';
 import { ModulesByCategoryPage } from './../pages/modules-by-category/modules-by-category';
 import { LearningModulePage } from './../pages/learning-module/learning-module';
 import { AddGoalPage } from './../pages/add-goal/add-goal';
@@ -44,12 +39,11 @@ import { AlertProvider } from '../providers/alert';
 import { ImageProvider } from '../providers/image';
 import { DataProvider } from '../providers/data';
 import { FirebaseProvider } from '../providers/firebase';
-
+import { GraphPage } from '../pages/graph/graph';
 import * as firebase from 'firebase';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-
 import { Settings } from '../settings';
 
 import { FriendPipe } from '../pipes/friend';
@@ -70,11 +64,14 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { Firebase } from '@ionic-native/firebase';
 import { Facebook } from '@ionic-native/facebook';
 
+import {Weight2PageModule} from '../pages/weight2/weight2.module';
+import {GraphPageModule} from '../pages/graph/graph.module';
+import {Weight2Page} from '../pages/weight2/weight2';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 
-
+import {ScreenOrientation} from '@ionic-native/screen-orientation';
 
 
 firebase.initializeApp(Settings.firebaseConfig);
@@ -107,15 +104,13 @@ firebase.initializeApp(Settings.firebaseConfig);
     AddGoalPage,
     LearningModulePage,
     ModulesByCategoryPage,
-    MyToDosPage,
-    AddToDosPage,
-    ToDoPage,
     WeightPage,
     MyWeightPage,
     AddWeightPage,
     YoutubePipe,
     FactsPage,
-    RecipesPage
+    RecipesPage,
+
 
   ],
   imports: [
@@ -133,7 +128,10 @@ firebase.initializeApp(Settings.firebaseConfig);
     AngularFireModule.initializeApp(Settings.firebaseConfig,'ionic3chat'),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    HttpModule
+    HttpModule,
+
+    Weight2PageModule,
+    GraphPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -141,6 +139,8 @@ firebase.initializeApp(Settings.firebaseConfig);
     LoginPage,
     HomePage,
     TabsPage,
+    Weight2Page,
+    GraphPage,
     MessagesPage,
     GroupsPage,
     FriendsPage,
@@ -157,15 +157,12 @@ firebase.initializeApp(Settings.firebaseConfig);
     AddGoalPage,
     LearningModulePage,
     ModulesByCategoryPage,
-    MyToDosPage,
-    AddToDosPage,
-    ToDoPage,
     WeightPage,
     MyWeightPage,
     AddWeightPage,
     ToolsPage,
     FactsPage,
-    RecipesPage
+    RecipesPage,
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler },
     SplashScreen,
@@ -175,16 +172,14 @@ firebase.initializeApp(Settings.firebaseConfig);
     Keyboard,
     Contacts,
     MediaCapture,
-
+    ScreenOrientation,
     IonicStorageModule,
 
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService,
     ActionPlannerService,
     LearningModulesService,
-    ToDoService,
     WeightService,
     SettingsService,
     YoutubeVideoPlayer,
@@ -198,6 +193,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     AlertProvider,
     ImageProvider,
     DataProvider,
-    FirebaseProvider]
+    FirebaseProvider,]
 })
 export class AppModule { }

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { AddToDosPage } from './add-to-dos';
+import { VelkommenPage } from './velkommen';
 
 @NgModule({
   declarations: [
-    AddToDosPage,
+    VelkommenPage,
   ],
   imports: [
-    IonicPageModule.forChild(AddToDosPage),
+    IonicPageModule.forChild(VelkommenPage),
   ],
 })
-export class AddToDosPageModule {}
+export class VelkommenPageModule {}

@@ -12,10 +12,9 @@
           </ion-item>
           <ion-item>
             <ion-input type="password" formControlName="password" placeholder="Passord"></ion-input>
-            <button item-right ion-button clear color="gray" (click)="forgotPassword()" >Glemte passord ?</button>
           </ion-item>
           <div>
-            <button ion-button color="dark" block tappable (click)="login()" [disabled]="!emailPasswordForm.valid">Login</button>
+            <button ion-button color="dark" block tappable (click)="login()">Login</button>
 
           </div>
         </form>

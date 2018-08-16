@@ -55,6 +55,6 @@ fetchGoals() {
   deleteGoal(index: number) {
     this.goals.splice(index, 1);
     this.storage.set('goals', this.goals)
-     
+
   }
-}
+  }

@@ -14,7 +14,7 @@
   <ion-navbar>
     <ion-title>Weight</ion-title>
   </ion-navbar>
-</ion-header>  
+</ion-header>
 <ion-content padding>
   <ion-grid>
       <ion-row>
@@ -28,24 +28,19 @@
             <p>{{ weight.weight }}</p>
           </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col text-center>
-              <img [src]="weight.imageUrl">
-            </ion-col>
-          </ion-row>
           <ion-row>
             <ion-col>
               <button
                 ion-button
                 block
-                (click)="onLeave()">Cancel</button>
+                (click)="onLeave()">Avbryt</button>
             </ion-col>
             <ion-col>
               <button
                 ion-button
                 block
                 color="danger"
-                (click)="onDelete()">Delete</button>
+                (click)="onDelete()">Slett</button>
             </ion-col>
           </ion-row>
         </ion-grid>

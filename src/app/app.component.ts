@@ -6,10 +6,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'firebase';
 import { LoginPage } from '../pages/login/login';
 import { Platform, MenuController, NavController} from 'ionic-angular';
-import { MessagesPage } from '../pages/messages/messages';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ToolsPage } from '../pages/tools/tools';
 import { HomePage } from '../pages/home/home';
+import { Weight2Page } from '../pages/weight2/weight2';
+import { GraphPage } from '../pages/graph/graph';
+
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -21,7 +25,8 @@ export class MyApp {
   messagesPage = TabsPage;
   toolsPage = ToolsPage;
   homePage = HomePage;
-
+  weight2Page = Weight2Page;
+  graphPage = GraphPage;
 
 
   @ViewChild('nav') nav: NavController;

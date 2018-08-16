@@ -10,17 +10,16 @@
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title>All Recorded Data</ion-title>
-   
+    <ion-title>Min Vekt</ion-title>
+
 </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
   <ion-card *ngFor="let weight of weights; let i=index" (click)="onOpenWeight(weight, i)">
-    
+
       <ion-card-content text-center>
         <ion-card-title>
           {{ weight.date }}
@@ -28,5 +27,5 @@
         <p>{{ weight.weight }}kg</p>
       </ion-card-content>
     </ion-card>
-  
+
 </ion-content>

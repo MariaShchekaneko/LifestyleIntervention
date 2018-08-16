@@ -4,7 +4,6 @@ import { Weight } from './../../models/weight';
 import { AddWeightPage } from './../add-weight/add-weight';
 import { ModalController, NavController, NavParams} from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
-
 @Component({
   selector: 'page-my-weight',
   templateUrl: 'my-weight.html',
@@ -16,8 +15,7 @@ export class MyWeightPage {
   weights: Weight[] = [];
   weights_bk: Weight;
 
-  @ViewChild('lineCanvas') lineCanvas;
-  lineChart: any;
+
 
   constructor( public modalCtrl:      ModalController,
                public navCtrl      :  NavController,
@@ -25,10 +23,8 @@ export class MyWeightPage {
                private weightService: WeightService)
   {
    this.weights = this.navParams.get('weight');
-  this.weights_bk = this.navParams.get('weight');
+    this.weights_bk = this.navParams.get('weight');
    }
-
-
 
 ngOnInit() {
   this.weightService.fetchWeights()
@@ -37,8 +33,10 @@ ngOnInit() {
     );
 }
 ionViewWillEnter(){
+
   this.weights = this.weightService.loadWeights();
 }
+
 onOpenWeight(weight: Weight, index: number) {
   const modal = this.modalCtrl.create(WeightPage, {weight: weight, index: index});
   modal.present();

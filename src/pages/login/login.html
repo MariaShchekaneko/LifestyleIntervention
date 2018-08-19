@@ -21,9 +21,7 @@
       </ion-list>
     </div>
     <div style="text-align:center">
-        <button *ngIf="facebookLoginEnabled==true" ion-button color="facebook" tappable (click)="loginProvider.facebookLogin()">
-          <ion-icon name="logo-facebook"></ion-icon></button>
-
+      <button ion-button block clear (click)="forgotPassword()">Glemte Passord</button>
         <button ion-button tappable (click)="registerModel()"><ion-icon>Registrer deg </ion-icon></button>
     </div>
   </div>

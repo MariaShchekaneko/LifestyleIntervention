@@ -1,18 +1,13 @@
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { SettingsService } from './../services/settings.service';
-import { WeightService } from './../services/weight.service';
 import { LearningModulesService } from './../services/learningModules.service';
 import { ActionPlannerService } from './../services/actionPlanner.service';
 import { YoutubePipe } from './../pipes/youtube/youtube';
-import { AddWeightPage } from './../pages/add-weight/add-weight';
-import { MyWeightPage } from './../pages/my-weight/my-weight';
-import { WeightPage } from './../pages/weight/weight';
 import { ModulesByCategoryPage } from './../pages/modules-by-category/modules-by-category';
 import { LearningModulePage } from './../pages/learning-module/learning-module';
 import { AddGoalPage } from './../pages/add-goal/add-goal';
 import { GoalPage } from './../pages/goal/goal';
 import { ActionPlannerPage } from './../pages/action-planner/action-planner';
-import { TodayPage } from './../pages/today/today';
 import { MyProgressPage } from './../pages/my-progress/my-progress';
 import { LearningModulesPage } from './../pages/learning-modules/learning-modules';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -98,15 +93,11 @@ firebase.initializeApp(Settings.firebaseConfig);
     GroupPipe,
     LearningModulesPage,
     MyProgressPage,
-    TodayPage,
     ActionPlannerPage,
     GoalPage,
     AddGoalPage,
     LearningModulePage,
     ModulesByCategoryPage,
-    WeightPage,
-    MyWeightPage,
-    AddWeightPage,
     YoutubePipe,
     FactsPage,
     RecipesPage,
@@ -151,15 +142,11 @@ firebase.initializeApp(Settings.firebaseConfig);
     AddMembersPage,
     LearningModulesPage,
     MyProgressPage,
-    TodayPage,
     ActionPlannerPage,
     GoalPage,
     AddGoalPage,
     LearningModulePage,
     ModulesByCategoryPage,
-    WeightPage,
-    MyWeightPage,
-    AddWeightPage,
     ToolsPage,
     FactsPage,
     RecipesPage,
@@ -180,7 +167,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ActionPlannerService,
     LearningModulesService,
-    WeightService,
     SettingsService,
     YoutubeVideoPlayer,
     File,

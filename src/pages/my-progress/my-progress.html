@@ -9,39 +9,16 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-grid>
-    <ion-row>
-        <button class="my_button"
-          ion-button full
-          [navPush] = "myWeightPage">
-          <div>
-            <ion-icon name = ''></ion-icon>
-            <br>
-            <label>Min Vekt</label>
-          </div>
-        </button>
-    </ion-row>
-      <ion-row>
-          <button class="my_button"
-                  ion-button full
-                  [navPush] = "">
-            <div>
-              <ion-icon name = ''></ion-icon>
-              <br>
-              <label>Tidspan</label>
-            </div>
-          </button>
-      </ion-row>
-      <ion-row>
-        <button class="my_button"
-          ion-button full
-          [navPush] = "myGoalsPage">
-          <div>
-            <ion-icon name = ''></ion-icon>
-            <br>
-            <label>Mine Mål</label>
-          </div>
-        </button>
-    </ion-row>
-  </ion-grid>
+  <div>
+    <ion-list>
+      <ion-item tappable
+                [navPush] = "graphPage">Min Vekt
+      </ion-item>
+      <ion-item tappable
+                [navPush] = "">Tidsplan
+      </ion-item>
+      <ion-item tappable
+                [navPush] = "myGoalsPage">Mine Mål</ion-item>
+    </ion-list>
+  </div>
 </ion-content>

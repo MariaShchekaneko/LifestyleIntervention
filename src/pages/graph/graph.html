@@ -1,12 +1,18 @@
 
 <ion-header>
   <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only [navPush] = "weight2Page">
+        <ion-icon name = "add"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-buttons left>
       <button ion-button icon-only menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Vekt</ion-title>
+    <ion-title>Min Vekt</ion-title>
+
   </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -18,5 +24,24 @@
           [options]="lineChartOptions"
           [chartType]="lineChartType">
   </canvas>
+
+
+  <ion-refresher (ionRefresh)="getEntries($event)">
+    <ion-refresher-content>Lade Einträge</ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let entry of entries$ | async">
+    <ion-item class="cardtitle">
+      <h2>{{ entry.time | date: 'dd.MM.yyyy HH:mm'}}</h2>
+    </ion-item>
+    <ion-card-content>
+      <div><span class="label"><b>Vekt: </b></span>{{entry.weight | number: '1.2'}}kg</div>
+      <div align="right">
+        <button ion-fab mini (click)="updateEntry(entry)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

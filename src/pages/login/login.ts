@@ -47,7 +47,7 @@ export class LoginPage {
   // Call loginProvider and send a password reset email.
   forgotPassword() {
     this.loginProvider.sendPasswordReset(this.emailForm.value["email"]);
-    this.clearForms();
+    //this.clearForms();
   }
 
   // Clear the forms.

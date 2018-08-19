@@ -64,7 +64,7 @@ export class Weight2Page implements OnInit {
   addEntry() {
     this.storage.addEntry(this.entry).subscribe(() => {
       this.view.instance.getToast().create({
-          message: 'Gewicht hinzugefügt',
+          message: 'Vekten ble lagret',
           duration: 2000,
           position: 'bottom'
         }).present();
@@ -76,7 +76,7 @@ export class Weight2Page implements OnInit {
   updateEntry() {
     this.storage.updateEntry(this.entry).subscribe(() => {
       this.view.instance.getToast().create({
-        message: 'Gewicht gespeichert',
+        message: 'Vekten ble oppdatert',
         duration: 2000,
         position: 'bottom'
       }).present();
@@ -85,8 +85,6 @@ export class Weight2Page implements OnInit {
 
   clearForm() {
     this.form.get('weight').setValue('');
-    this.form.get('fett').setValue('');
-    this.form.get('water').setValue('');
   }
 
 }

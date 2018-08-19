@@ -19,22 +19,22 @@ export class AlertProvider {
     switch (ID) {
       case ENTRY_EXISTS_DIALOG:
         dialog = {
-          title: 'Eintrag überschreiben ?',
-          message: 'Für heute existiert bereits ein Eintrag!',
+          title: 'Endre dagens logg',
+          message: 'Du har allerede registrert vekten din i dag',
           buttons: [
             {
-              text: 'Abbrechen',
+              text: 'Avbrytt',
               role: 'cancel'
             },
             {
-              text: 'Hinzufügen',
+              text: 'Legg til',
               handler: updateHandler,
               storage: this.storage,
               entry: entry,
               view: view
             },
             {
-              text: 'Überschreiben',
+              text: 'Endre dagens logg',
               handler: deleteHandler,
               storage: this.storage,
               entry: entry,

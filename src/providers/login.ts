@@ -113,7 +113,7 @@ export class LoginProvider {
   // Send Password Reset Email to the user.
   sendPasswordReset(email) {
     console.log(email);
-    if(email != null || email != undefined || email != ""){
+   // if(email != null || email != undefined || email != ""){
       this.loadingProvider.show();
       firebase.auth().sendPasswordResetEmail(email).then((success) => {
           this.loadingProvider.hide();
@@ -122,7 +122,7 @@ export class LoginProvider {
           this.loadingProvider.hide();
           this.alertProvider.showErrorMessage(error["code"]);
         });
-    }
+   // }
   }
 
   // Creating new user after signed up

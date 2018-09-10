@@ -19,7 +19,7 @@ export class LoginPage {
 
 
   constructor(public navCtrl: NavController, public loginProvider: LoginProvider, public formBuilder: FormBuilder, public modalCtrl: ModalController) {
-    // It's important to hook the navController to our loginProvider.
+
     this.loginProvider.setNavController(this.navCtrl);
     // Create our forms and their validators based on validators set on validator.ts.
     this.emailPasswordForm = formBuilder.group({

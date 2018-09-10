@@ -1,12 +1,12 @@
-/*export default [
+export default [
     {
     category: 'Modules',
     modules: [
     {
-    id: "Module 1. Welcom to HH4M" ,
-    description: "In this module, we will learn about how preeclampsia can affect your future health and get an introduction to the program.",
+    id: "Module 1. Mat for hjertet." ,
+    description: "",
    // videoUrl: "https://player.vimeo.com/video/129693969?api=1&player_id=video"
-    videoUrl: "https://www.youtube.com/embed/6yEolzkdlGk?ecver=2"
+    videoUrl: "https://www.youtube.com/embed/O2z-P7ka1ro?ecver=2"
     },
 
 
@@ -92,7 +92,7 @@ modules: [
     {
     id: "Eating Out: Take DASH With You" ,
     description: "This module will discuss how to follow the DASH eating plan when you get a chance to eat out or on the go.",
-    videoUrl: "https://www.youtube.com/embed/bxtYC1lBSH0?ecver=2"
+    videoUrl: "https://www.youtube.com/embed/O2z-P7ka1ro?ecver=2"
     },
 
     {
@@ -135,16 +135,17 @@ modules: [
   icon: 'book'
 }
 ];
-*/
 
 
+/*
 export default [
     {
     category: 'Moduler',
     modules: [
     {
     id: "1. Motivasjon for endring" ,
-    description: ""
+    description: "",
+    videoUrl: "https://www.youtube.com/embed/O2z-P7ka1ro?ecver=2"
     },
 
     {
@@ -204,3 +205,4 @@ modules: [
   icon: 'book'
 }
 ];
+*/

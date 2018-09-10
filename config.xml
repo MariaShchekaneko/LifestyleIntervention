@@ -108,8 +108,10 @@
     <plugin name="cordova-plugin-camera" spec="^4.0.1" />
     <plugin name="cordova-plugin-firebase" spec="^0.1.25" />
     <plugin name="cordova-plugin-youtube-video-player" spec="^1.0.6" />
-    <plugin name="cordova-plugin-file" spec="~6.0.1" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="6.3.0" />
     <plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
+    <plugin name="cordova-plugin-document-viewer" spec="^0.9.10" />
 </widget>

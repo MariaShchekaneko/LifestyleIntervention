@@ -13,8 +13,13 @@
 
           <img src="https://media1.britannica.com/eb-media/66/176366-004-DF6A3C11.jpg"/>
         {{ module.description }}
+
       </ion-card-content>
     </ion-card>
-
-    <button ion-button color="danger" (click)="onLeave()">Close</button>
+    <ion-card>
+      <ion-card-content>
+        <iframe width="100%" height="215" [src]="module.videoUrl | youtube" frameborder="0" allowfullscreen ></iframe>
+      </ion-card-content>
+    </ion-card>
+    <button ion-button color="danger" (click)="onLeave()">Lukk</button>
   </ion-content>

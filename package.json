@@ -23,8 +23,10 @@
     "@ionic-native/camera": "^4.10.0",
     "@ionic-native/contacts": "^4.10.0",
     "@ionic-native/core": "^4.10.0",
+    "@ionic-native/document-viewer": "^4.12.2",
     "@ionic-native/facebook": "4.5.2",
-    "@ionic-native/file": "^4.10.0",
+    "@ionic-native/file": "^4.12.2",
+    "@ionic-native/file-transfer": "^4.12.2",
     "@ionic-native/firebase": "4.5.2",
     "@ionic-native/geolocation": "^4.10.0",
     "@ionic-native/google-plus": "^4.10.0",
@@ -44,8 +46,10 @@
     "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-contacts": "^3.0.1",
     "cordova-plugin-device": "^1.1.7",
+    "cordova-plugin-document-viewer": "^0.9.10",
     "cordova-plugin-facebook4": "^1.9.1",
     "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-firebase": "^0.1.25",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-googleplus": "^5.3.0",
@@ -110,7 +114,9 @@
         "REVERSED_CLIENT_ID": "com.googleusercontent.apps.812704429521-aio77k7ojshui8m2mtcj0vl3fci9esrh"
       },
       "cordova-plugin-youtube-video-player": {},
-      "cordova-plugin-screen-orientation": {}
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-document-viewer": {},
+      "cordova-plugin-file-transfer": {}
     },
     "platforms": [
       "ios",

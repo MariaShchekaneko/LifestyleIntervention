@@ -55,6 +55,8 @@ import { Keyboard } from '@ionic-native/keyboard';
 import { Contacts } from '@ionic-native/contacts';
 import { MediaCapture } from '@ionic-native/media-capture';
 import { File } from '@ionic-native/file';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { DocumentViewer } from '@ionic-native/document-viewer';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Firebase } from '@ionic-native/firebase';
 import { Facebook } from '@ionic-native/facebook';
@@ -161,7 +163,6 @@ firebase.initializeApp(Settings.firebaseConfig);
     MediaCapture,
     ScreenOrientation,
     IonicStorageModule,
-
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
@@ -170,6 +171,8 @@ firebase.initializeApp(Settings.firebaseConfig);
     SettingsService,
     YoutubeVideoPlayer,
     File,
+    DocumentViewer,
+    FileTransfer,
     Geolocation,
     Firebase,
     Facebook,

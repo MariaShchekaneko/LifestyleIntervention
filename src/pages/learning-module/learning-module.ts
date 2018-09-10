@@ -1,7 +1,7 @@
 import { Module } from './../../models/module';
 import { NavParams, ViewController } from 'ionic-angular';
 import { Component } from '@angular/core';
-//import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @Component({
   selector: 'page-learning-module',
@@ -10,11 +10,11 @@ import { Component } from '@angular/core';
 export class LearningModulePage {
 
   module: Module;
-  //videoUrl: string;
+  videoUrl: string;
 
   constructor(public navParams: NavParams,
               private viewCtrl: ViewController,
-              //private youtube: YoutubeVideoPlayer
+              private youtube: YoutubeVideoPlayer
             )
     {
     this.module = this.navParams.get('module');
@@ -25,7 +25,7 @@ export class LearningModulePage {
     this.viewCtrl.dismiss();
   }
 
-  /*playVideo() {
+  playVideo() {
     let options: StreamingVideoOptions = {
       successCallback: () => {console.log('SUCCESS')},
       errorCallback: () => {console.log('ERROR')},
@@ -34,7 +34,7 @@ export class LearningModulePage {
     this.steamingMedia.playVideo(this.module.videoUrl, options);
    // this.youtube.openVideo(this.module.videoUrl);
 
-  }
+  }/*
  // playVideo() {
    //this.youtube.openVideo(this.module.videoUrl);
    //this.youtube.openVideo('https://www.youtube.com/watch?v=ibP5WJOPkR');

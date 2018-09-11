@@ -26,8 +26,8 @@ export class Weight2Page implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       weight: this.fb.control('', Validators.required),
-      fett: this.fb.control(''),
-      water: this.fb.control('')
+     // fett: this.fb.control(''),
+      //water: this.fb.control('')
     });
   }
 
@@ -66,7 +66,7 @@ export class Weight2Page implements OnInit {
       this.view.instance.getToast().create({
           message: 'Vekten ble lagret',
           duration: 2000,
-          position: 'bottom'
+          position: 'middle'
         }).present();
       this.view.instance.clearForm();
       });
@@ -78,7 +78,7 @@ export class Weight2Page implements OnInit {
       this.view.instance.getToast().create({
         message: 'Vekten ble oppdatert',
         duration: 2000,
-        position: 'bottom'
+        position: 'middle'
       }).present();
     });
   }

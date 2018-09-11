@@ -5,8 +5,7 @@ import { Injectable, Pipe, PipeTransform } from '@angular/core';
 })
 @Injectable()
 export class GroupPipe implements PipeTransform {
-  // GroupPipe
-  // Filter group by name
+  
   transform(groups: any[], search: string): any {
     if (!groups) {
       return;

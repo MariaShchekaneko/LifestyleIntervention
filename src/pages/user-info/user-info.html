@@ -20,16 +20,16 @@
         <button ion-button icon-only class="success" tappable (click)="acceptFriendRequest()"><ion-icon name="md-checkmark"></ion-icon></button>
       </div>
       <div *ngIf="requestsSent && requestsSent.indexOf(user.$key) > -1">
-        <p class="info">Friend request sent.</p>
-        <button ion-button class="dark" tappable (click)="cancelFriendRequest()">Cancel Friend Request</button>
+        <p class="info">Venneforespørsen er sendt.</p>
+        <button ion-button class="dark" tappable (click)="cancelFriendRequest()">Avbryt venneforespørsel</button>
       </div>
       <div *ngIf="canAdd()">
-        <p class="info">You are not yet friends.</p>
-        <button ion-button class="primary" tappable (click)="sendFriendRequest()">Send Friend Request</button>
+        <p class="info">Dere er ikke venner enda.</p>
+        <button ion-button class="primary" tappable (click)="sendFriendRequest()">Send venneforespørsel</button>
       </div>
       <div *ngIf="friends && friends.indexOf(user.$key) > -1">
-        <p class="info">You are already friends.</p>
-        <button ion-button class="primary" tappable (click)="sendMessage()">Send Message</button>
+        <p class="info">Dere er venner allerede</p>
+        <button ion-button class="primary" tappable (click)="sendMessage()">Send melding</button>
       </div>
     </div>
   </div>

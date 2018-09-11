@@ -27,7 +27,7 @@
 
 
   <ion-refresher (ionRefresh)="getEntries($event)">
-    <ion-refresher-content>Lade Einträge</ion-refresher-content>
+    <ion-refresher-content>Oppdater</ion-refresher-content>
   </ion-refresher>
 
   <ion-card *ngFor="let entry of entries$ | async">

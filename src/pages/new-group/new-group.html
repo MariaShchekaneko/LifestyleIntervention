@@ -2,7 +2,7 @@
   <ion-navbar color="white">
     <ion-title>Ny gruppechat</ion-title>
     <ion-buttons end>
-      <button ion-button tappable (click)="done()" >Done</button>
+      <button ion-button tappable (click)="done()" >Ok</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -30,7 +30,7 @@
         <ion-list no-lines>
         <ion-item  *ngFor="let member of groupMembers">
           <ion-avatar item-left>
-            <img src="{{member.img}}"/>
+              <img src="assets/images/logo.jpg" >
           </ion-avatar>
           <h2>{{member.name}}</h2>
           <ion-icon name="close-circle" item-right (click)="removeFromGroup(member)"></ion-icon>
@@ -40,23 +40,19 @@
       </form>
 
     <ion-list-header>
-     Ny medlem
+     Legg til personer
     </ion-list-header>
     <div class="form">
-      <!-- No friends to create a group. -->
-      <div class="empty" *ngIf="friends && friends.length == 0">
-        <p>You have no friends right now to start a group conversation.</p>
-      </div>
       <!-- Show friends to add/remove to group. -->
       <ion-list class="avatar-list" *ngIf="friends && friends.length > 0">
-        <ion-searchbar [(ngModel)]="searchFriend" placeholder="Search for friend or username" showCancelButton="true" cancelButtonText="Done"></ion-searchbar>
+        <ion-searchbar [(ngModel)]="searchFriend" placeholder="Sok" showCancelButton="true" cancelButtonText="Ok"></ion-searchbar>
         <ion-item *ngFor="let friend of friends | friendFilter:searchFriend" no-lines tappable (click)="addOrRemoveFromGroup(friend)">
 
           <button item-right tappable (click)="addToGroup(friend); $event.stopPropagation();" *ngIf="!inGroup(friend)"><ion-icon name="md-add-circle" class="success"></ion-icon></button>
           <button item-right tappable (click)="removeFromGroup(friend); $event.stopPropagation();" *ngIf="inGroup(friend)"><ion-icon name="md-close-circle" class="danger"></ion-icon></button>
 
           <ion-avatar item-left>
-            <img src="{{friend.img}}">
+              <img src="assets/images/logo.jpg" >
           </ion-avatar>
           <h2>{{friend.name}}</h2>
           <p>@{{friend.username}}</p>

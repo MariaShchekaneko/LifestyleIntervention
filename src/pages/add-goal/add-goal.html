@@ -10,29 +10,28 @@
   <ion-content padding>
     <form #f = "ngForm" (ngSubmit)= "onSubmit(f)">
       <ion-list>
-          <h6>Update your Action Plan</h6>
-          <p>Weekly goals that will help you reach your long-term goal.</p>
+          <h6>Sett nytt mål</h6>
           <ion-item>
-              <ion-label floating>This week I will :</ion-label>
+              <ion-label floating>Denne uken skal jeg:</ion-label>
             <ion-textarea
             type = "text"
             name = "goalName"
             ngModel
             required></ion-textarea>
           </ion-item>
-          <p>Think for a moment about any barriers or challenges you might face in making this change.</p>
+          <p>Tenk på hvilke utfordringer du kan ha for å oppnå ditt mål.</p>
 
           <ion-item>
-              <ion-label floating>Potential Barries:</ion-label>
+              <ion-label floating>Utfordringer:</ion-label>
             <ion-textarea
             type = "text"
             name = "barrierName"
             ngModel
             required></ion-textarea>
           </ion-item>
-          <p>Now, think of ways we can overcome these challenges. Take advantage of our online community to support you while you work towards reaching your goals, and help others reach their goals too!</p>
+          <p>Tenk på strategier som kan hjelpe deg å oppnå ditt mål</p>
           <ion-item>
-              <ion-label floating>Strategies to overcome these barriers :</ion-label>
+              <ion-label floating>Strategier for å oppnå målet:</ion-label>
             <ion-textarea
             type = "text"
             name = "strategyName"
@@ -44,6 +43,6 @@
         ion-button
         type = "submit"
         block
-        [disabled] = "!f.valid">Submit</button>
+        [disabled] = "!f.valid">Ok</button>
     </form>
   </ion-content>
